@@ -1,0 +1,253 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+#btn_pregnancy, #btn_mychildren, #btn_mysexlife, #btn_mymouth, #btn_myeyes {
+	padding-left: 66px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+#btn_pregnancy h1, #btn_mychildren h1, #btn_mysexlife h1, #btn_mymouth h1, #btn_myeyes h1 {
+	font-size: 1em;
+	white-space: normal;
+}
+
+#btn_pregnancy > div, #btn_mychildren > div, #btn_mysexlife > div, #btn_mymouth > div, #btn_myeyes > div {
+	width: 35px !important;
+	height: 35px;
+	background: url("../img/check.png") no-repeat center center;
+	background-size: 35px;
+	position: absolute;
+	top: 16px;
+	right: 8px;
+	display: block;
+}
+
+#btn_pregnancy > img, #btn_mychildren > img, #btn_mysexlife > img, #btn_mymouth > img, #btn_myeyes > img {
+	display: block;
+	width: 50px;
+	padding-left: 5px;
+	padding-top: 20px;
+}
+
+div[data-role="header"] {
+	height: 110px;
+	background: url("../img/logo.png") no-repeat #23B9F1 center center;
+	background-size: 240px;
+	border: none;
+}
+
+#detailContent > h1 {
+	font-size: 1.2em;
+	padding: 0;
+}
+
+#detailContent fieldset .ui-btn-inner {
+	font-size: 10px;
+}
+
+#detailContent .ui-collapsible-content > p {
+	padding: 0;
+	margin: 0;
+}
+
+.gender {
+	background: url("../img/sexlife.png") no-repeat right top;
+	background-size: 20px;
+}
+
+.pregnancy {
+	background: url("../img/pregnant.png") no-repeat right top;
+	background-size: 20px;	
+}
+
+.ages {
+	background: url("../img/children.png") no-repeat right top;
+	background-size: 20px;
+}
+
+.image {
+	width: 100%;
+	height: 90px;
+	display: block;
+	position: absolute;
+}
+
+
+#progressBar {
+	margin: 5px auto;
+	width: 200px;
+	height: 22px;
+}
+
+#progressBar div {
+	height: 100%;
+	color: #fff;
+	text-align: right;
+	font-size: 12px;
+	line-height: 22px;
+	width: 0;
+}
+
+.pb {
+	overflow: hidden;
+}
+.pb div {
+	background-color: #1a82f7;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0099FF), to(#1a82f7)); 
+	background: -webkit-linear-gradient(top, #0099FF, #1a82f7); 
+	background: -moz-linear-gradient(top, #0099FF, #1a82f7); 
+	background: -ms-linear-gradient(top, #0099FF, #1a82f7); 
+	background: -o-linear-gradient(top, #0099FF, #1a82f7);
+}
+
+#home{
+	background-image: linear-gradient(bottom, #23BAF1 0%, #FFFFFF 100%);
+	background-image: -o-linear-gradient(bottom, #23BAF1 0%, #FFFFFF 100%);
+	background-image: -moz-linear-gradient(bottom, #23BAF1 0%, #FFFFFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #23BAF1 0%, #FFFFFF 100%);
+	background-image: -ms-linear-gradient(bottom, #23BAF1 0%, #FFFFFF 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		right bottom,
+		right top,
+		color-stop(0, #23BAF1),
+		color-stop(1, #FFFFFF)
+	);
+}
+
+/*=========================================BEGIN ANDROID DEVICESS ===================================*/
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*background-color: #fff;	*/			
+    background-attachment:fixed;
+    font-family: 'Open Sans', sans-serif;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform: none;
+    width:100%;
+
+    background-image: linear-gradient(bottom, #23BAF1 36%, #FFFFFF 100%);
+	background-image: -o-linear-gradient(bottom, #23BAF1 36%, #FFFFFF 100%);
+	background-image: -moz-linear-gradient(bottom, #23BAF1 36%, #FFFFFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #23BAF1 36%, #FFFFFF 100%);
+	background-image: -ms-linear-gradient(bottom, #23BAF1 36%, #FFFFFF 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		right bottom,
+		right top,
+		color-stop(0.36, #23BAF1),
+		color-stop(1, #FFFFFF)
+	);
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:49%;
+    right: 50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:250px;                   /* text area width */
+    /*background-position: 50% 50%;*/
+    /*background-size: 100%;*/      /*it works good but, expand the image some bad */
+    /*http://stackoverflow.com/questions/6028737/resize-background-image-in-div-using-css*/            
+    background-size: contain;
+    text-align:center;
+    padding:210px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:100px 0px 0px 0px;   /* padding-top + padding-bottom + text area = image height */
+        margin:-98px 0px 0px -98px;  /* offset vertical: half of image height */
+                                     /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.logoEntidad{
+	/*background:url(../img/minsalud.png) no-repeat center top; 
+	position:absolute;             
+    left:49%;
+    top:50%;
+    height:50px;                   
+    width:250px;   */                
+    /*background-position: 50% 50%;*/
+    /*background-size: 100%;*/      /*it works good but, expand the image some bad */
+    /*http://stackoverflow.com/questions/6028737/resize-background-image-in-div-using-css*/            
+   /* background-size: contain;
+    text-align:center;*/
+   /* padding:90px 0px 0px 0px;*/     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -112px;*/  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+.title{
+    font-size: 18px;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    letter-spacing:-1px;
+    color: #ed3237;
+    padding-top: 10px;
+}
+
+.subtitle{
+   font-size: 15px;
+   margin:0px;
+   overflow:visible;
+   padding:0px;
+   text-align:center; 
+   letter-spacing: -1px;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+/*========================================== END ANDROID DEVICES ====================================*/
