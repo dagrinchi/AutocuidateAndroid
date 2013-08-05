@@ -2,18 +2,18 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-#btn_pregnancy, #btn_mychildren, #btn_mysexlife, #btn_mymouth, #btn_myeyes {
+.btn_pregnancy, .btn_mychildren, .btn_mysexlife, .btn_mymouth, .btn_myeyes {
 	padding-left: 66px !important;
 	padding-top: 5px !important;
 	padding-bottom: 5px !important;
 }
 
-#btn_pregnancy h1, #btn_mychildren h1, #btn_mysexlife h1, #btn_mymouth h1, #btn_myeyes h1 {
+.btn_pregnancy h1, .btn_mychildren h1, .btn_mysexlife h1, .btn_mymouth h1, .btn_myeyes h1 {
 	font-size: 1em;
 	white-space: normal;
 }
 
-#btn_pregnancy > div, #btn_mychildren > div, #btn_mysexlife > div, #btn_mymouth > div, #btn_myeyes > div {
+.btn_pregnancy > div, .btn_mychildren > div, .btn_mysexlife > div, .btn_mymouth > div, .btn_myeyes > div {
 	width: 35px !important;
 	height: 35px;
 	background: url("../img/check.png") no-repeat center center;
@@ -24,7 +24,7 @@
 	display: block;
 }
 
-#btn_pregnancy > img, #btn_mychildren > img, #btn_mysexlife > img, #btn_mymouth > img, #btn_myeyes > img {
+.btn_pregnancy > img, .btn_mychildren > img, .btn_mysexlife > img, .btn_mymouth > img, .btn_myeyes > img {
 	display: block;
 	width: 50px;
 	padding-left: 5px;
@@ -123,8 +123,7 @@ div[data-role="header"] {
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    /*background-color: #fff;	*/			
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */			
     background-attachment:fixed;
     font-family: 'Open Sans', sans-serif;
     height:100%;
@@ -150,7 +149,7 @@ body {
 
 /* Portrait layout (default) */
 /*.app {
-    background:url(../img/logo2.png) no-repeat center top;
+    background:url(../img/logo2.png) no-repeat center top; 
     position:absolute;             
     left:49%;
     right: 50%;
@@ -160,7 +159,7 @@ body {
     background-size: contain;
     text-align:center;
     padding:210px 0px 0px 0px;     
-    margin:-115px 0px 0px -112px;                            
+    margin:-115px 0px 0px -112px;                                
 }*/
 
 /* Landscape layout (with min-width) */
@@ -168,10 +167,26 @@ body {
     .app {
         background-position:left center;
         padding:100px 0px 0px 0px;   
-        margin:-98px 0px 0px -98px;  
-                                     
+        margin:-98px 0px 0px -98px;                                     
     }
 }*/
+
+.logoEntidad{
+	/*background:url(../img/minsalud.png) no-repeat center top; 
+	position:absolute;             
+    left:49%;
+    top:50%;
+    height:50px;                   
+    width:250px;   */                
+    /*background-position: 50% 50%;*/
+    /*background-size: 100%;*/      /*it works good but, expand the image some bad */
+    /*http://stackoverflow.com/questions/6028737/resize-background-image-in-div-using-css*/            
+   /* background-size: contain;
+    text-align:center;*/
+   /* padding:90px 0px 0px 0px;*/     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -112px;*/  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
 
 .title{
     font-size: 18px;
@@ -231,192 +246,13 @@ body {
 
 /*========================================== END ANDROID DEVICES ====================================*/
 
-/*=========================STARTS FOR @MEDIA QUERYS ANDROID MULTIPLE RESOLUTIONS=====================*/
-
-    /* Smartphones (portrait) ----------- */
-    @media only screen 
-    and (max-width : 320px) {
-        .app {
-        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-        position:absolute;             /* position in the center of the screen */
-        left:49%;
-        right: 50%;
-        top:50%;
-        height:50px;                   /* text area height */
-        width:250px;                   /* text area width */
-        background-size: contain;
-        text-align:center;
-        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
-                                       /* offset horizontal: half of text area width */
-    }
-}
-
-    /* Smartphones (portrait and landscape) ----------- */
-    @media only screen 
-    and (min-device-width : 320px) 
-    and (max-device-width : 480px) {	
-    	.app {
-	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-	    position:absolute;             /* position in the center of the screen */
-	    left:49%;
-	    right: 50%;
-	    top:50%;
-	    height:50px;                   /* text area height */
-	    width:250px;                   /* text area width */           
-	    background-size: contain;
-	    text-align:center;
-	    padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-	    margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
-	                                   /* offset horizontal: half of text area width */
-    }
-}
-
-    @media only screen 
-    and (min-device-width : 480px) 
-    and (max-device-width : 800px) {	
-    	.app {
-	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-	    position:absolute;             /* position in the center of the screen */
-	    left:49%;
-	    right: 50%;
-	    top:50%;
-	    height:50px;                   /* text area height */
-	    width:350px;                   /* text area width */           
-	    background-size: contain;
-	    text-align:center;
-	    padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-	    margin:-138px 0px 0px -170px;  /* offset vertical: half of image height and text area height */
-	                                   /* offset horizontal: half of text area width */
-    }
-}
-
-    /*Samsung Galaxy S2 / S3*/
-    @media only screen 
-    and (device-width: 320px) 
-    and (device-height: 640px) 
-    and (-webkit-device-pixel-ratio: 2){
-        .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 100px;
-        width: 308px;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }
-}
-
-    @media only screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)
-
-    /* ---------- Desire + Galaxy S2 (portrait) ----------- */
-    @media only screen
-    and (min-device-width : 480px)
-    and (max-device-width : 800px)
-    and (orientation : portrait) {
-        .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 100px;
-        width: 308px;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }
-}
-
-    @media only screen 
-    and (min-device-width : 720px)
-    and (max-device-width : 1280px) {	
-	   .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position:absolute;             /* position in the center of the screen */
-        left:49%;
-        right: 50%;
-        top:50%;
-        height: 120px;                   /* text area height */
-        width:  600px;                   /* text area width */
-        background-size: contain;
-        text-align: center;
-        padding: 545px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin: -259px 0px 0px -290px;  /* offset vertical: half of image height and text area height */
-                                       /* offset horizontal: half of text area width */
-    }
-}
-
-    /* iPads (portrait and landscape) ----------- */
-    @media only screen 
-    and (min-device-width : 768px) 
-    and (max-device-width : 1024px) {
-	   .app {
-        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-        position:absolute;             /* position in the center of the screen */
-        left:49%;
-        right: 50%;
-        top:50%;
-        height:50px;                   /* text area height */
-        width:250px;                   /* text area width */
-        background-size: contain;
-        text-align:center;
-        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
-                                       /* offset horizontal: half of text area width */
-    }
-}
-
-    @media only screen 
-    and (min-device-width : 768px) 
-    and (max-device-width : 1024px) 
-    and (orientation : portrait) {
-    	.app {
-        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-        position:absolute;             /* position in the center of the screen */
-        left:49%;
-        right: 50%;
-        top:50%;
-        height:50px;                   /* text area height */
-        width:250px;                   /* text area width */
-        background-size: contain;
-        text-align:center;
-        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
-                                       /* offset horizontal: half of text area width */
-    }
-}
-
-    @media only screen
-    and (min-device-width : 800px)
-    and (max-device-width : 1280px) 
-    and (orientation : portrait) {
-        .app {
-        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-        position:absolute;             /* position in the center of the screen */
-        left:49%;
-        right: 50%;
-        top:50%;
-        height:50px;                   /* text area height */
-        width:250px;                   /* text area width */
-        background-size: contain;
-        text-align:center;
-        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
-                                       /* offset horizontal: half of text area width */
-    }
-}
-
-    @media only screen 
-    and (device-width: 601px) and (device-height: 906px) 
-    and (-webkit-min-device-pixel-ratio: 1.331) 
-    and (-webkit-max-device-pixel-ratio: 1.332){
-        .app {
+/*iPad mini*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1)  {
+    .app {
         background:url(../img/logo2.png) no-repeat center top; 
         position:absolute;            
         left:49%;       
@@ -428,6 +264,131 @@ body {
         text-align: center;
         padding: 545px 0px 0px 0px;     
         margin: -259px 0px 0px -290px;  
-    }  
+    }
 }
-/*============================= IT ENDS!=======================================*/
+
+/* ipad portrait 1 2 3 */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position:absolute;            
+        left:49%;       
+        right: 50%;     
+        top:50%;            
+        height: 120px;                   
+        width:  600px;                   
+        background-size: contain;
+        text-align: center;
+        padding: 545px 0px 0px 0px;     
+        margin: -259px 0px 0px -290px;  
+    }
+}
+
+/*iPad Retina*/
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 120px;
+        width: 695px;
+        background-size: contain;
+        text-align: center;
+        padding: 633px 0px 0px 0px;
+        margin: -259px 0px 0px -337px; 
+    }
+} 
+
+/*iPhone 5*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+/*iPhone 2G/3G/3GS Resolution*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+/*iPhone 4/4s*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+.ui-icon-autoc-pregnancy {
+    background-image: url("../img/pregnant.png") !important;
+    background-size: 18px !important;
+}
+
+.ui-icon-autoc-children {
+    background-image: url("../img/children.png") !important;
+    background-size: 18px !important;
+}
+
+.ui-icon-autoc-sexlife {
+    background-image: url("../img/sexlife.png") !important;
+    background-size: 18px !important;
+}
+
+.ui-icon-autoc-mouth {
+    background-image: url("../img/mouth.png") !important;
+    background-size: 18px !important;
+}
+
+.ui-icon-autoc-eyes {
+    background-image: url("../img/eyes.png") !important;
+    background-size: 18px !important;
+}
+
