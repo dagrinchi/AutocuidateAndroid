@@ -149,50 +149,29 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
-    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
+/*.app {
+    background:url(../img/logo2.png) no-repeat center top;
+    position:absolute;             
     left:49%;
     right: 50%;
     top:50%;
-    height:50px;                   /* text area height */
-    width:250px;                   /* text area width */
-    /*background-position: 50% 50%;*/
-    /*background-size: 100%;*/      /*it works good but, expand the image some bad */
-    /*http://stackoverflow.com/questions/6028737/resize-background-image-in-div-using-css*/            
+    height:50px;                   
+    width:250px;                            
     background-size: contain;
     text-align:center;
-    padding:210px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
+    padding:210px 0px 0px 0px;     
+    margin:-115px 0px 0px -112px;                            
+}*/
 
 /* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+/*@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
         background-position:left center;
-        padding:100px 0px 0px 0px;   /* padding-top + padding-bottom + text area = image height */
-        margin:-98px 0px 0px -98px;  /* offset vertical: half of image height */
-                                     /* offset horizontal: half of image width and text area width */
+        padding:100px 0px 0px 0px;   
+        margin:-98px 0px 0px -98px;  
+                                     
     }
-}
-
-.logoEntidad{
-	/*background:url(../img/minsalud.png) no-repeat center top; 
-	position:absolute;             
-    left:49%;
-    top:50%;
-    height:50px;                   
-    width:250px;   */                
-    /*background-position: 50% 50%;*/
-    /*background-size: 100%;*/      /*it works good but, expand the image some bad */
-    /*http://stackoverflow.com/questions/6028737/resize-background-image-in-div-using-css*/            
-   /* background-size: contain;
-    text-align:center;*/
-   /* padding:90px 0px 0px 0px;*/     /* image height is 200px (bottom 20px are overlapped with text) */
-    /*margin:-115px 0px 0px -112px;*/  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
+}*/
 
 .title{
     font-size: 18px;
@@ -251,3 +230,204 @@ body {
 }
 
 /*========================================== END ANDROID DEVICES ====================================*/
+
+/*=========================STARTS FOR @MEDIA QUERYS ANDROID MULTIPLE RESOLUTIONS=====================*/
+
+    /* Smartphones (portrait) ----------- */
+    @media only screen 
+    and (max-width : 320px) {
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {	
+    	.app {
+	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+	    position:absolute;             /* position in the center of the screen */
+	    left:49%;
+	    right: 50%;
+	    top:50%;
+	    height:50px;                   /* text area height */
+	    width:250px;                   /* text area width */           
+	    background-size: contain;
+	    text-align:center;
+	    padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+	    margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+	                                   /* offset horizontal: half of text area width */
+    }
+}
+
+    @media only screen 
+    and (min-device-width : 480px) 
+    and (max-device-width : 800px) {	
+    	.app {
+	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+	    position:absolute;             /* position in the center of the screen */
+	    left:49%;
+	    right: 50%;
+	    top:50%;
+	    height:50px;                   /* text area height */
+	    width:350px;                   /* text area width */           
+	    background-size: contain;
+	    text-align:center;
+	    padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+	    margin:-138px 0px 0px -170px;  /* offset vertical: half of image height and text area height */
+	                                   /* offset horizontal: half of text area width */
+    }
+}
+
+    /*Samsung Galaxy S2 / S3*/
+    @media only screen 
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 2){
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+    @media only screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)
+
+    /* ---------- Desire + Galaxy S2 (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 480px)
+    and (max-device-width : 800px)
+    and (orientation : portrait) {
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+    @media only screen 
+    and (min-device-width : 720px)
+    and (max-device-width : 1280px) {	
+	   .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height: 120px;                   /* text area height */
+        width:  600px;                   /* text area width */
+        background-size: contain;
+        text-align: center;
+        padding: 545px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin: -259px 0px 0px -290px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) {
+	   .app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+    	.app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
+    @media only screen
+    and (min-device-width : 800px)
+    and (max-device-width : 1280px) 
+    and (orientation : portrait) {
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
+    @media only screen 
+    and (device-width: 601px) and (device-height: 906px) 
+    and (-webkit-min-device-pixel-ratio: 1.331) 
+    and (-webkit-max-device-pixel-ratio: 1.332){
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position:absolute;            
+        left:49%;       
+        right: 50%;     
+        top:50%;            
+        height: 120px;                   
+        width:  600px;                   
+        background-size: contain;
+        text-align: center;
+        padding: 545px 0px 0px 0px;     
+        margin: -259px 0px 0px -290px;  
+    }  
+}
+/*============================= IT ENDS!=======================================*/

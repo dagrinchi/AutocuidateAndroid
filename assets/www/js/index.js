@@ -291,7 +291,7 @@ var app = {
 		// navigator.splashscreen.hide();
 		if (app.checkUpdatedData()) {
 			setTimeout(function() {
-				$.mobile.changePage("#age-gender");
+				$.mobile.changePage("#home");
 			}, 1000);
 
 		} else {
@@ -410,7 +410,7 @@ var app = {
 		console.log("successCB: Guardando fecha de actualización!");
 		var updated = new Date();
 		window.localStorage.setItem("updated", updated);
-		$.mobile.changePage("#age-gender");
+		$.mobile.changePage("#home");
 	},
 
 	openDB: function(q) {
