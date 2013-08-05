@@ -231,12 +231,12 @@ body {
 
 /*========================================== END ANDROID DEVICES ====================================*/
 
-/*STARTS FOR @MEDIA QUERYS ANDROID MULTIPLE RESOLUTIONS*/
+/*=========================STARTS FOR @MEDIA QUERYS ANDROID MULTIPLE RESOLUTIONS=====================*/
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-    .app {
+    /* Smartphones (portrait) ----------- */
+    @media only screen 
+    and (max-width : 320px) {
+        .app {
         background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
         position:absolute;             /* position in the center of the screen */
         left:49%;
@@ -252,11 +252,11 @@ and (max-width : 320px) {
     }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {	
-	.app {
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px) {	
+    	.app {
 	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
 	    position:absolute;             /* position in the center of the screen */
 	    left:49%;
@@ -272,10 +272,10 @@ and (max-device-width : 480px) {
     }
 }
 
-@media only screen 
-and (min-device-width : 480px) 
-and (max-device-width : 800px) {	
-	.app {
+    @media only screen 
+    and (min-device-width : 480px) 
+    and (max-device-width : 800px) {	
+    	.app {
 	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
 	    position:absolute;             /* position in the center of the screen */
 	    left:49%;
@@ -291,10 +291,52 @@ and (max-device-width : 800px) {
     }
 }
 
-@media only screen 
-and (min-device-width : 720px)
-and (max-device-width : 1280px) {	
-	.app {
+    /*Samsung Galaxy S2 / S3*/
+    @media only screen 
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 2){
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+    @media only screen and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)
+
+    /* ---------- Desire + Galaxy S2 (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 480px)
+    and (max-device-width : 800px)
+    and (orientation : portrait) {
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position: absolute;
+        left: 49%;
+        right: 50%;
+        top: 50%;
+        height: 100px;
+        width: 308px;
+        background-size: contain;
+        text-align: center;
+        padding: 310px 0px 0px 0px;
+        margin: -166px 0px 0px -151px;
+    }
+}
+
+    @media only screen 
+    and (min-device-width : 720px)
+    and (max-device-width : 1280px) {	
+	   .app {
         background:url(../img/logo2.png) no-repeat center top; 
         position:absolute;             /* position in the center of the screen */
         left:49%;
@@ -310,11 +352,11 @@ and (max-device-width : 1280px) {
     }
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-	.app {
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) {
+	   .app {
         background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
         position:absolute;             /* position in the center of the screen */
         left:49%;
@@ -330,12 +372,11 @@ and (max-device-width : 1024px) {
     }
 }
 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-	.app {
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+    	.app {
         background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
         position:absolute;             /* position in the center of the screen */
         left:49%;
@@ -351,22 +392,42 @@ and (orientation : portrait) {
     }
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
+    @media only screen
+    and (min-device-width : 800px)
+    and (max-device-width : 1280px) 
+    and (orientation : portrait) {
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
 }
 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+    @media only screen 
+    and (device-width: 601px) and (device-height: 906px) 
+    and (-webkit-min-device-pixel-ratio: 1.331) 
+    and (-webkit-max-device-pixel-ratio: 1.332){
+        .app {
+        background:url(../img/logo2.png) no-repeat center top; 
+        position:absolute;            
+        left:49%;       
+        right: 50%;     
+        top:50%;            
+        height: 120px;                   
+        width:  600px;                   
+        background-size: contain;
+        text-align: center;
+        padding: 545px 0px 0px 0px;     
+        margin: -259px 0px 0px -290px;  
+    }  
 }
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-}
-/*ENDS IT!*/
+/*============================= IT ENDS!=======================================*/
