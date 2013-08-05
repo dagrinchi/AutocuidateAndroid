@@ -233,6 +233,25 @@ body {
 
 /*STARTS FOR @MEDIA QUERYS ANDROID MULTIPLE RESOLUTIONS*/
 
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    .app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
@@ -251,14 +270,6 @@ and (max-device-width : 480px) {
 	    margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
 	                                   /* offset horizontal: half of text area width */
     }
-}
-
-
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
 }
 
 @media only screen 
@@ -281,39 +292,20 @@ and (max-device-width : 800px) {
 }
 
 @media only screen 
-and (min-device-width : 768px)
+and (min-device-width : 720px)
 and (max-device-width : 1280px) {	
 	.app {
-	    background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
-	    position:absolute;             /* position in the center of the screen */
-	    left:49%;
-	    right: 50%;
-	    top:50%;
-	    height: 120px;                   /* text area height */
-	    width:  600px;                    /* text area width */
-	    background-size: contain;
-	    text-align:center;
-	    padding:320px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-	    margin:-138px 0px 0px -170px;  /* offset vertical: half of image height and text area height */
-	                                   /* offset horizontal: half of text area width */
-    }
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-    .app {
-        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        background:url(../img/logo2.png) no-repeat center top; 
         position:absolute;             /* position in the center of the screen */
         left:49%;
         right: 50%;
         top:50%;
-        height:50px;                   /* text area height */
-        width:250px;                   /* text area width */
+        height: 120px;                   /* text area height */
+        width:  600px;                   /* text area width */
         background-size: contain;
-        text-align:center;
-        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+        text-align: center;
+        padding: 545px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin: -259px 0px 0px -290px;  /* offset vertical: half of image height and text area height */
                                        /* offset horizontal: half of text area width */
     }
 }
@@ -338,20 +330,25 @@ and (max-device-width : 1024px) {
     }
 }
 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
 /* iPads (portrait) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-/* Styles */
+	.app {
+        background:url(../img/logo2.png) no-repeat center top; /* 170px x 200px */
+        position:absolute;             /* position in the center of the screen */
+        left:49%;
+        right: 50%;
+        top:50%;
+        height:50px;                   /* text area height */
+        width:250px;                   /* text area width */
+        background-size: contain;
+        text-align:center;
+        padding:240px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+        margin:-115px 0px 0px -121px;  /* offset vertical: half of image height and text area height */
+                                       /* offset horizontal: half of text area width */
+    }
 }
 
 /* Desktops and laptops ----------- */
