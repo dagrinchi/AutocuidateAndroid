@@ -2827,11 +2827,13 @@ _html2canvas.Renderer.Canvas = function(options) {
         newCanvas = doc.createElement('canvas');
         newCanvas.width = bounds.width;
         newCanvas.height = bounds.height;
-        ctx = newCanvas.getContext("2d");
-
-        ctx.drawImage(canvas, bounds.left, bounds.top, bounds.width, bounds.height, 0, 0, bounds.width, bounds.height);
-        canvas = null;
-        return newCanvas;
+        console.log(">>>>>>>>>>>>>>>>> WIDTH" + bounds.width);
+        console.log(">>>>>>>>>>>>>>>>> HEIGHT" + bounds.height);
+        // ctx = newCanvas.getContext("2d");
+// 
+//         ctx.drawImage(canvas, bounds.left, bounds.top, bounds.width, bounds.height, 0, 0, bounds.width, bounds.height);
+//         canvas = null;
+//         return newCanvas;
       }
     }
 

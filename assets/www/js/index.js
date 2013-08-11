@@ -158,14 +158,14 @@ var app = {
 		$("#share").on("click", function(e) {
 			app.showLoadingBox("Descargando!");
 			//var page = $('#detail [data-role="content"]');
-			var page = document.getElementById("detail");
+			var page = document.getElementById("detailContent");
 			var title = $('#detail [data-role="content"] > h1').text();
 			html2canvas(page, {
 				onrendered: function(canvas) {
-					if (device.platform === "iOS") {
-						console.log("Compartiendo en iOS!");
+					if (device.platform === "Android") {
+						console.log("Compartiendo en Android!");
 						var social = window.plugins.social;
-						social.share(title, 'http://www.minsalud.gov.co', canvas);
+						social.share(title, canvas);
 						app.hideLoadingBox();
 					}
 				}

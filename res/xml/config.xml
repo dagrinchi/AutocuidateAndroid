@@ -101,6 +101,9 @@
     <feature name="InAppBrowser">
       <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
     </feature>
+     <feature name="Social">
+      <param name="android-package" value="com.cool4code.autocuidate.plugin.Social"/>
+    </feature>
     <!-- Deprecated plugins element. Remove in 3.0 -->
     <plugins>
     </plugins>
