@@ -511,7 +511,7 @@ var app = {
 	createDB: function() {
 		var msg = "createDB: Creando base de datos!";
 		console.log(msg);
-		var db = window.openDatabase("autocuidate", "1.0", "Autocuidate", 3145728);
+		var db = window.openDatabase("autocuidate", "1.0", "Autocuidate", 4000000);
 		db.transaction(app.populateDB, app.errorCB, app.successCB);
 	},
 
@@ -615,7 +615,7 @@ var app = {
 	openDB: function(q) {
 		console.log("openDB: Abriendo base de datos!");
 		app.showLoadingBox("Abriendo base de datos!");
-		var db = window.openDatabase("autocuidate", "1.0", "Autocuidate", 3145728);
+		var db = window.openDatabase("autocuidate", "1.0", "Autocuidate", 4000000);
 		db.transaction(q, app.errorCB);
 	},
 
