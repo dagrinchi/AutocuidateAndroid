@@ -170,6 +170,10 @@ var app = {
 				navigator.notification.alert('Debe digitar la edad!', function() {
 					return false;
 				}, 'Atención', 'Aceptar');
+			} else if (dataObj[0]["value"] >= 24 && dataObj[1]["value"] === "m") {
+				navigator.notification.alert('Para edades superiores a 23 meses se debe realizar la consulta en años!', function() {
+					return false;
+				}, 'Atención', 'Aceptar');
 			} else {
 				app.selection.edad = dataObj[0]["value"];
 				app.selection.age = dataObj[0]["value"] + dataObj[1]["value"];
@@ -210,7 +214,8 @@ var app = {
 						var social = window.plugins.social;
 						social.share(title, canvas);
 						app.hideLoadingBox();
-					}				}
+					}
+				}
 			});
 		});
 
@@ -333,7 +338,7 @@ var app = {
 		});
 	},
 
-	buildSql: function(category) {
+	buildSql: function(category, children) {
 		var sql = "SELECT * FROM datos";
 		sql += " WHERE edad = '" + app.selection.age + "'";
 		switch (app.selection.gender) {
@@ -363,21 +368,36 @@ var app = {
 				} else if (app.selection.edad > 10 && app.selection.edad <= 29) {
 					sql += " AND mujer_joven_10_29_anos = 'SI'";
 					sql += " AND (masculino = '' OR femenino = 'SI')";
+					switch (app.selection.pregnant) {
+						case "si":
+							sql += " AND en_condicion_embarazo = 'SI'";
+							break;
+						case "no":
+							sql += " AND sin_condicion_embarazo = 'SI'";
+							break;
+					}
 				} else if (app.selection.edad > 29 && app.selection.edad <= 44) {
 					sql += " AND mef_29_44_anos = 'SI'";
 					sql += " AND (masculino = '' OR femenino = 'SI')";
+					switch (app.selection.pregnant) {
+						case "si":
+							sql += " AND en_condicion_embarazo = 'SI'";
+							break;
+						case "no":
+							sql += " AND sin_condicion_embarazo = 'SI'";
+							break;
+					}
 				} else if (app.selection.edad > 44) {
 					sql += " AND mujer_adulta_45_anos = 'SI'";
 					sql += " AND (masculino = '' OR femenino = 'SI')";
-				}
-
-				switch (app.selection.pregnant) {
-					case "si":
-					sql += " AND en_condicion_embarazo = 'SI'";
-					break;
-					case "no":
-					sql += " AND sin_condicion_embarazo = 'SI'";
-					break;
+					switch (app.selection.pregnant) {
+						case "si":
+							sql += " AND en_condicion_embarazo = 'SI'";
+							break;
+						case "no":
+							sql += " AND sin_condicion_embarazo = 'SI'";
+							break;
+					}
 				}
 				break;
 		}
@@ -387,6 +407,12 @@ var app = {
 					sql += " AND " + v.column + " = 'X'";
 				}
 			});
+		}
+		if (typeof children === "boolean" && children === true) {
+			sql = "SELECT DISTINCT id, PartitionKey, RowKey, mi_embarazo, mis_hijos, mi_vida_sexual_y_reproductiva, mi_boca, mis_ojos, frase_mi_embarazo, frasemis_hijos, frase_mi_vida_sexual_y_reproductiva, frasemi_boca, frasemis_ojos, actividad_de_prevencion, femenino, masculino, en_condicion_embarazo, sin_condicion_embarazo, no_aplica_condicion_de_embarazo, nins_10_anos, mujer_joven_10_29_anos, hombre_joven_10_29_anos, hef_29_44_anos, mef_29_44_anos, hombre_adulto_45_anos, mujer_adulta_45_anos, titulo, descripcion_de_la_actividad, informacionadic FROM datos\n";
+			sql += " WHERE  mis_hijos = 'X' AND ((edad = '1a') or (edad = '2a') or (edad = '3a') or (edad = '4a') or (edad = '5a') or (edad = '6a') or (edad = '7a') or (edad = '8a') or (edad = '9a') or (edad = '10a') or (edad like '%m%'))\n";
+			sql += " group by PartitionKey\n";
+			sql += " order by PartitionKey\n";
 		}
 		console.log(sql);
 		return sql;
@@ -594,7 +620,6 @@ var app = {
 					$.each(rows, function(k8, v8) {
 						rows[k8][k6] = '"' + val[k8] + '"';
 						sql = 'INSERT INTO datos (' + dbFields + ') VALUES (' + rows[k8].join() + '); \n';
-						//console.log(sql);
 						tx.executeSql(sql);
 					});
 				}
@@ -697,6 +722,7 @@ var app = {
 			$(list).listview("refresh");
 
 			var column;
+			var children = false;
 			$(list + " a").on("click", function() {
 				console.log("eventLinks: Evento del link!");
 				$.each(app.selection.category, function(k, v) {
@@ -706,25 +732,34 @@ var app = {
 				switch (column) {
 					case "mi_embarazo":
 						app.selection.category[0].sel = true;
+						children = false;
 						break;
 					case "mis_hijos":
 						app.selection.category[1].sel = true;
+						if (app.selection.edad >= 10) {
+							children = true;	
+						} else {
+							children = false;
+						}
 						break;
 					case "mi_vida_sexual_y_reproductiva":
 						app.selection.category[2].sel = true;
+						children = false;
 						break;
 					case "mi_boca":
 						app.selection.category[3].sel = true;
+						children = false;
 						break;
 					case "mis_ojos":
 						app.selection.category[4].sel = true;
+						children = false;
 						break;
 				}
 				app.openDB(queryActivities2);
 			});
 
 			function queryActivities2(tx) {
-				tx.executeSql(app.buildSql(true), [], app.ent.activities2, app.errorCB);
+				tx.executeSql(app.buildSql(true, children), [], app.ent.activities2, app.errorCB);
 			}
 
 		},
