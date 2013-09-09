@@ -270,15 +270,14 @@ var app = {
 			//var page = $('#detail [data-role="content"]');
 			var page = document.getElementById("detailContent");
 			var title = $('#detail [data-role="content"] > h1').text();
-			
+
 			html2canvas(page, {
-					onrendered: function(canvas) {
-						if (device.platform === "Android") {
-							console.log("Compartiendo en Android!");
-							var social = window.plugins.social;
-							social.share(title, canvas);
-							app.hideLoadingBox();
-						}
+				onrendered: function(canvas) {
+					if (device.platform === "Android") {
+						console.log("Compartiendo en Android!");
+						var social = window.plugins.social;
+						social.share(title, canvas);
+						app.hideLoadingBox();
 					}
 				}
 			});
