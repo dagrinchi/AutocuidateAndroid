@@ -4,3 +4,11 @@
 *.apk
 
 .idea/workspace.xml
+
+assets/www/js/index.js
+
+out/production/AutocuidateAndroid/AutocuidateAndroid.apk.res
+
+out/production/AutocuidateAndroid/AutocuidateAndroid.unaligned.apk
+
+out/production/AutocuidateAndroid/AutocuidateAndroid.unaligned.apk

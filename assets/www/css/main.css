@@ -267,19 +267,19 @@ body {
     }        
 }
 
-@media (max-device-width: 600px) and (orientation: portrait) { 
+/*@media (max-device-width: 600px) and (orientation: portrait) { 
 .app {
         background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
         position:absolute;             
         left:50%;
         top: 50%;
         height: 50px;                   
-        width : 377px;                   
+        width : 330px;                   
         text-align:center;
         padding:  320px 0px 0px 0px;     
-        margin : -175px 0px 0px -196px;    
+        margin : -175px 0px 0px -166px;    
     } 
-}
+}*/
 
 @media only screen and (min-width: 595px) and (max-width: 610px){
 .app {
@@ -294,7 +294,7 @@ body {
         margin : -175px 0px 0px -196px;    
     }
 }
-
+/*
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
 .app {
         background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
@@ -321,12 +321,10 @@ body {
         padding:  320px 0px 0px 0px;     
         margin : -175px 0px 0px -196px;    
     }
-}
+}*/
 
 /*==============================Extra resolution Queries=========================================*/
-@media only screen and (-webkit-device-pixel-ratio: .75) {
-  /* CSS for Low-density screens goes here *
-   * Ex: HTC Evo, HTC Incredible, Nexus One */
+/*@media only screen and (-webkit-device-pixel-ratio: .75) {
 .app {
         background:url(../img/resLogos/logo480x800px.png) no-repeat center top; 
         position:absolute;             
@@ -338,7 +336,7 @@ body {
         padding:  270px 0px 0px 0px;     
         margin : -175px 0px 0px -156px;    
     }
-}
+}*/
 
 .title{
     font-size: 18px;
