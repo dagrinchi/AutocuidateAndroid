@@ -462,7 +462,7 @@ var app = {
 		navigator.splashscreen.hide();
 		if (app.checkUpdatedData()) {
 			setTimeout(function() {
-				$.mobile.changePage("#age-gender");
+				$.mobile.changePage("#home"); /*#age-gender*/
 			}, 3000);
 		} else {
 			app.load();
@@ -634,7 +634,7 @@ var app = {
 		var updated = new Date();
 		window.localStorage.setItem("updated", updated);
 		$("#date").html("<strong>" + updated + "</strong>");
-		$.mobile.changePage("#age-gender");
+		$.mobile.changePage("#home"); /*#age-gender*/
 	},
 
 	openDB: function(q) {

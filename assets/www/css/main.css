@@ -183,10 +183,6 @@ body {
     }
 }*/
 
-/* old Smartphones (portrait) 320 x 240 ----------- */
-
-
-/* Android 240 X 320 ----------- */
 @media only screen and (max-width: 241px){
 .app {
         background:url(../img/resLogos/logo240x320px.png) no-repeat center top; 
@@ -201,7 +197,6 @@ body {
     }
 }
 
-/* Android 320 x 480 Galaxy S1----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 .app {
         background:url(../img/resLogos/logo320x480px.png) no-repeat center top; 
@@ -216,7 +211,6 @@ body {
     }
 }
 
-/* Android(Samsung Galaxy) in portrait 380 X 685 ----------- */
 @media only screen and (min-width: 375px) and (max-width: 385px){
 .app {
         background:url(../img/resLogos/logo375x385px.png) no-repeat center top; 
@@ -231,7 +225,6 @@ body {
     }
 }
 
-/* Android 479px ----------- */
 @media only screen and (max-width : 479px) {
 .app {
         background:url(../img/resLogos/logo479px.png) no-repeat center top; 
@@ -272,6 +265,63 @@ body {
         padding:  270px 0px 0px 0px;     
         margin : -175px 0px 0px -156px;    
     }        
+}
+
+/*Testing Other*/
+@media (max-device-width: 600px) and (orientation: portrait) { 
+.app {
+        background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
+        position:absolute;             
+        left:50%;
+        top: 50%;
+        height: 50px;                   
+        width : 377px;                   
+        text-align:center;
+        padding:  320px 0px 0px 0px;     
+        margin : -175px 0px 0px -196px;    
+    } 
+}
+
+@media only screen and (min-width: 595px) and (max-width: 610px){
+.app {
+        background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
+        position:absolute;             
+        left:50%;
+        top: 50%;
+        height: 50px;                   
+        width : 377px;                   
+        text-align:center;
+        padding:  320px 0px 0px 0px;     
+        margin : -175px 0px 0px -196px;    
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
+.app {
+        background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
+        position:absolute;             
+        left:50%;
+        top: 50%;
+        height: 50px;                   
+        width : 377px;                   
+        text-align:center;
+        padding:  320px 0px 0px 0px;     
+        margin : -175px 0px 0px -196px;    
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+.app {
+        background:url(../img/resLogos/logo600x1024px.png) no-repeat center top; 
+        position:absolute;             
+        left:50%;
+        top: 50%;
+        height: 50px;                   
+        width : 377px;                   
+        text-align:center;
+        padding:  320px 0px 0px 0px;     
+        margin : -175px 0px 0px -196px;    
+    }
 }
 
 /*==============================Extra resolution Queries=========================================*/
@@ -347,141 +397,7 @@ body {
     -webkit-animation:fade 3000ms infinite;
 }
 
-/*========================================== END ANDROID DEVICES ====================================*/
-/*@media only screen and (-webkit-device-pixel-ratio: .75) {
-  /* CSS for Low-density screens goes here *
-   * Ex: HTC Evo, HTC Incredible, Nexus One 
-
-   .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 100px;
-        width: 308px;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }
-}*/
-/*@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 240px) 
-and (orientation : portrait) {
-    .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 100px;
-        width: 308px;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }
-}
-*/
-
-/* old Smartphones (landscape) ----------- */
-   /* @media only screen
-    and (min-width : 320px) {
-    background:url(../img/logo2.png) no-repeat center bottom; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 80%;
-        height: 100px;
-        width: 308px;
-        background-color: red;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }*/
- 
-    /* old Smartphones (portrait) ----------- */
-    /*@media only screen
-    and (max-width : 320px) {
-    background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 100px;
-        width: 308px;
-        background-size: contain;
-        text-align: center;
-        padding: 310px 0px 0px 0px;
-        margin: -166px 0px 0px -151px;
-    }*/
-
-/*
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait)
-and (-webkit-min-device-pixel-ratio: 1)  {
-    .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position:absolute;            
-        left:49%;       
-        right: 50%;     
-        top:50%;            
-        height: 120px;                   
-        width:  600px;                   
-        background-size: contain;
-        text-align: center;
-        padding: 545px 0px 0px 0px;     
-        margin: -259px 0px 0px -290px;  
-    }
-}
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) 
-and (-webkit-min-device-pixel-ratio: 1) {
-    .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position:absolute;            
-        left:49%;       
-        right: 50%;     
-        top:50%;            
-        height: 120px;                   
-        width:  600px;                   
-        background-size: contain;
-        text-align: center;
-        padding: 545px 0px 0px 0px;     
-        margin: -259px 0px 0px -290px;  
-    }
-}
-
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
-    .app {
-        background:url(../img/logo2.png) no-repeat center top; 
-        position: absolute;
-        left: 49%;
-        right: 50%;
-        top: 50%;
-        height: 120px;
-        width: 695px;
-        background-size: contain;
-        text-align: center;
-        padding: 633px 0px 0px 0px;
-        margin: -259px 0px 0px -337px; 
-    }
-} 
-
-
-*/
-
-
+/*=========================================ENDS ANDROID DEVICESS ===================================*/
 .ui-icon-autoc-pregnancy {
     background-image: url("../img/pregnant.png") !important;
     background-size: 18px !important;
