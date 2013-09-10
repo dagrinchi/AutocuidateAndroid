@@ -270,7 +270,6 @@ var app = {
 			//var page = $('#detail [data-role="content"]');
 			var page = document.getElementById("detailContent");
 			var title = $('#detail [data-role="content"] > h1').text();
-			
 			html2canvas(page, {
 				onrendered: function(canvas) {
 					if (device.platform === "Android") {
@@ -592,7 +591,7 @@ var app = {
 		navigator.splashscreen.hide();
 		if (app.checkUpdatedData()) {
 			setTimeout(function() {
-				$.mobile.changePage("#age-gender"); /*#age-gender*/
+				$.mobile.changePage("#age-gender");
 			}, 3000);
 		} else {
 			app.load();
@@ -774,7 +773,7 @@ var app = {
 		var updated = new Date();
 		window.localStorage.setItem("updated", updated);
 		$("#date").html("<strong>" + updated + "</strong>");
-		$.mobile.changePage("#age-gender"); /*#age-gender*/
+		$.mobile.changePage("#age-gender");
 	},
 
 	openDB: function(q) {
@@ -1000,13 +999,11 @@ var app = {
 			html += '<div data-role="controlgroup" data-type="vertical" class="pregnancy">\n';
 			html += '<p>Condición de embarazo:</p>\n';
 
-			if (item['en_condicion_embarazo'] === "SI") {
+			if (item['en_condicion_embarazo'] === "SI" && app.selection.pregnant === "si") {
 				html += '<a href="#" data-role="button" data-icon="check" data-iconpos="right">Si</a>\n';
-			}
-			if (item['sin_condicion_embarazo'] === "SI") {
+			} else if (item['sin_condicion_embarazo'] === "SI" && app.selection.pregnant === "no") {
 				html += '<a href="#" data-role="button" data-icon="check" data-iconpos="right">No</a>\n';
-			}
-			if (item['no_aplica_condicion_de_embarazo'] === "SI") {
+			} else if (item['no_aplica_condicion_de_embarazo'] === "SI") {
 				html += '<a href="#" data-role="button" data-icon="check" data-iconpos="right">No aplica</a>\n';
 			}
 			html += '</div>\n';
