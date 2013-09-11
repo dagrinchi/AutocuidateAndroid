@@ -183,7 +183,7 @@ body {
     }
 }*/
 
-/*@media only screen and (max-width: 241px){
+@media only screen and (max-width: 241px){
 .app {
         background:url(../img/resLogos/logo240x320px.png) no-repeat center top; 
         position:absolute;             
@@ -195,7 +195,7 @@ body {
         padding:  180px 0px 0px 0px;     
         margin : -115px 0px 0px -112px;  
     }
-}*/
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 .app {
@@ -207,11 +207,11 @@ body {
         width : 313px;                
         text-align:center;
         padding:  210px 0px 0px 0px;     
-        margin : -175px 0px 0px -156px;    
+        margin : -125px 0px 0px -156px;    
     }
 }
 
-/*@media only screen and (min-width: 375px) and (max-width: 385px){
+@media only screen and (min-width: 375px) and (max-width: 385px){
 .app {
         background:url(../img/resLogos/logo375x385px.png) no-repeat center top; 
         position:absolute;             
@@ -274,10 +274,10 @@ body {
         left:50%;
         top: 50%;
         height: 50px;                   
-        width : 377px;                   
+        width : 330px;                   
         text-align:center;
         padding:  320px 0px 0px 0px;     
-        margin : -175px 0px 0px -196px;    
+        margin : -175px 0px 0px -166px;    
     } 
 }
 
@@ -321,12 +321,10 @@ body {
         padding:  320px 0px 0px 0px;     
         margin : -175px 0px 0px -196px;    
     }
-}*/
+}
 
 /*==============================Extra resolution Queries=========================================*/
 @media only screen and (-webkit-device-pixel-ratio: .75) {
-  /* CSS for Low-density screens goes here *
-   * Ex: HTC Evo, HTC Incredible, Nexus One */
 .app {
         background:url(../img/resLogos/logo480x800px.png) no-repeat center top; 
         position:absolute;             
@@ -339,6 +337,7 @@ body {
         margin : -175px 0px 0px -156px;    
     }
 }
+
 
 .title{
     font-size: 18px;
